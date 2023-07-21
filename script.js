@@ -1,17 +1,11 @@
-function fibonacci(num) {
-// your code here
-	var a=0;
-	var b=1;
-	var c;
+let fib =[0,1];
+function fibonacci(num){
 
-	for(let i=0;i<num;i++){
-		console.log(a);
-		c=a+b;
-		
-		a=b;
-		b=c;
-		
+	for(let i=2;i<num;i++){
+		fib[i] = fib[i-1] + fib[i-2];
 	}
+	return fib[num-1]
 }
 
 module.exports = fibonacci;
+
